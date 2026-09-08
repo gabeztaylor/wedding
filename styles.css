@@ -11,8 +11,12 @@
   --navy: #172d5f;
   --parchment: #e8d9b8;
   --shadow: 7px 7px 0 #382a22;
-  --sans: "Avenir Next", Avenir, "Century Gothic", Futura, sans-serif;
-  --serif: Baskerville, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --display: "Cinzel", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --body-serif: "Cormorant Garamond", Baskerville, "Palatino Linotype", Georgia, serif;
+  --cloth-texture:
+    repeating-linear-gradient(0deg, rgba(45, 31, 22, .065) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(255, 238, 190, .04) 0 1px, transparent 1px 4px),
+    radial-gradient(circle at 16% 21%, rgba(245, 224, 170, .11) 0 .7px, transparent .9px 100%);
 }
 
 html[data-theme="dark"] {
@@ -46,9 +50,9 @@ body {
     ),
     var(--bg);
   color: var(--text);
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.65;
+  font-family: var(--body-serif);
+  font-size: 18px;
+  line-height: 1.58;
 }
 
 body::before {
@@ -84,10 +88,15 @@ a:hover { color: var(--navy); }
 }
 
 .card {
-  background: var(--surface-strong);
+  background-color: var(--surface-strong);
+  background-image: var(--cloth-texture);
+  background-size: 3px 3px, 4px 4px, 96px 96px;
   border: 2px solid var(--border);
   border-radius: 2px;
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    inset 0 0 0 5px color-mix(in oklab, var(--surface-strong) 72%, transparent),
+    inset 0 0 0 6px color-mix(in oklab, var(--gold) 52%, var(--border));
 }
 
 .site-header {
@@ -120,7 +129,7 @@ a:hover { color: var(--navy); }
   background: var(--blue);
   box-shadow: 3px 3px 0 var(--border);
   color: var(--navy);
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 27px;
   font-weight: 700;
 }
@@ -128,16 +137,17 @@ a:hover { color: var(--navy); }
 .brand-name,
 nav a,
 .button {
+  font-family: var(--display);
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: .13em;
   text-transform: uppercase;
 }
 .brand-note {
   margin-top: 3px;
   color: var(--muted);
-  font-family: var(--serif);
-  font-size: 12px;
+  font-family: var(--body-serif);
+  font-size: 14px;
   font-style: italic;
 }
 
@@ -151,7 +161,9 @@ nav a:hover { border-color: var(--border); background: var(--gold); color: #3025
   padding: 8px 14px;
   border: 1.5px solid var(--border);
   border-radius: 2px;
-  background: var(--surface-strong);
+  background-color: var(--surface-strong);
+  background-image: var(--cloth-texture);
+  background-size: 3px 3px, 4px 4px, 96px 96px;
   color: var(--text);
   cursor: pointer;
   transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
@@ -187,7 +199,9 @@ main { display: grid; gap: 24px; }
   justify-items: center;
   max-width: none;
   padding: 28px 34px 30px;
-  background: var(--blue);
+  background-color: var(--blue);
+  background-image: var(--cloth-texture);
+  background-size: 3px 3px, 4px 4px, 96px 96px;
 }
 .visually-hidden {
   position: absolute;
@@ -209,17 +223,18 @@ main { display: grid; gap: 24px; }
   border: 1.5px solid var(--border);
   background: color-mix(in oklab, var(--parchment) 88%, transparent);
   color: var(--navy);
+  font-family: var(--display);
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: .15em;
   text-transform: uppercase;
 }
 h1,
 h2 {
   color: var(--text);
-  font-family: var(--serif);
-  font-weight: 700;
-  letter-spacing: -.025em;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: .015em;
 }
 h1 {
   margin: 22px 0 0;
@@ -229,15 +244,16 @@ h1 {
   text-transform: uppercase;
 }
 h2 { margin: 12px 0 18px; font-size: clamp(32px, 5vw, 56px); line-height: .96; }
-.intro { max-width: 610px; margin: 18px auto 0; padding: 0; font-size: clamp(16px, 2vw, 19px); }
+.intro { max-width: 650px; margin: 18px auto 0; padding: 0; font-size: clamp(19px, 2.2vw, 23px); }
 .hero-notes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
 .hero-notes span {
   padding: 8px 11px;
   border: 1.5px solid var(--border);
   background: color-mix(in oklab, var(--parchment) 92%, transparent);
   color: #30251f;
+  font-family: var(--display);
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: .13em;
   text-transform: uppercase;
 }
@@ -248,18 +264,19 @@ h2 { margin: 12px 0 18px; font-size: clamp(32px, 5vw, 56px); line-height: .96; }
   align-items: center;
   gap: 30px;
   padding: 36px 40px;
-  background: var(--surface-strong);
+  background-color: var(--surface-strong);
 }
 .announcement-copy { max-width: 700px; }
 .announcement-copy > p:last-child {
   max-width: 620px;
   margin: 0;
   color: color-mix(in oklab, var(--text) 82%, transparent);
+  font-size: 20px;
 }
 .edition-mark {
   margin: 0;
   color: var(--gold);
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(72px, 12vw, 130px);
   font-weight: 700;
   line-height: .8;
@@ -286,14 +303,15 @@ h2 { margin: 12px 0 18px; font-size: clamp(32px, 5vw, 56px); line-height: .96; }
 .details-grid > div:last-child { padding-right: 0; border-right: 0; }
 dt {
   color: var(--navy);
+  font-family: var(--display);
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
 dd {
   margin: 8px 0 0;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(19px, 2.5vw, 25px);
   font-weight: 700;
 }
@@ -307,8 +325,9 @@ footer {
   padding-top: 18px;
   border-top: 2px solid var(--border);
   color: var(--parchment);
+  font-family: var(--display);
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
