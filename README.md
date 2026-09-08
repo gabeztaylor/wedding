@@ -20,3 +20,4 @@ Run `npm run check` before committing changes.
 Pushing the `main` branch starts the included GitHub Pages workflow. The first
 time, the repository may need **Settings → Pages → Source → GitHub Actions**
 selected on GitHub.
+ 
