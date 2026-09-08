@@ -5,21 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Wedding details, schedule, and updates."
+      content="Wedding details, schedule, travel information, and updates."
     />
+    <meta name="theme-color" content="#6f5a49" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Our Wedding" />
+    <meta
+      property="og:description"
+      content="Wedding details, schedule, travel information, and updates."
+    />
+    <meta property="og:url" content="https://gabrielsdescent.com/wedding/" />
+    <meta property="og:image" content="https://gabrielsdescent.com/wedding/hero-v3.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Wedding" />
+    <meta
+      name="twitter:description"
+      content="Wedding details, schedule, travel information, and updates."
+    />
+    <meta name="twitter:image" content="https://gabrielsdescent.com/wedding/hero-v3.png" />
     <title>Our Wedding</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">Save the date</p>
-        <h1 id="page-title">We’re getting married!</h1>
-        <p class="intro">
-          Our wedding website is taking shape. Check back soon for the date,
-          location, schedule, travel details, and RSVP information.
-        </p>
-      </section>
-    </main>
+    <div class="page-shell">
+      <header class="site-header card">
+        <a class="brand" href="#top" aria-label="Our Wedding home">
+          <span class="monogram" aria-hidden="true">W</span>
+          <span class="brand-copy">
+            <span class="brand-name">Our Wedding</span>
+            <span class="brand-note">A celebration in the making</span>
+          </span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#details">Details</a>
+          <a href="#updates">Updates</a>
+        </nav>
+
+        <button class="button" id="theme-toggle" type="button" aria-label="Toggle color theme">
+          Theme
+        </button>
+      </header>
+
+      <main id="top">
+        <section class="hero card" aria-labelledby="page-title">
+          <img
+            class="hero-art"
+            src="hero-v3.png"
+            alt="Our Wedding — Save the Date, framed by an antique celestial archway"
+            width="1730"
+            height="909"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <div class="hero-inner">
+            <p class="eyebrow">Details forthcoming</p>
+            <h1 class="visually-hidden" id="page-title">We’re getting married!</h1>
+            <p class="intro">
+              Our wedding website is taking shape. Check back soon for the date,
+              location, schedule, travel details, and RSVP information.
+            </p>
+            <div class="hero-notes" aria-label="Wedding updates">
+              <span>Invitation to follow</span>
+              <span>Updates coming soon</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="announcement card" id="updates" aria-labelledby="announcement-title">
+          <div class="announcement-copy">
+            <p class="section-label">A note from us</p>
+            <h2 id="announcement-title">The next chapter</h2>
+            <p>
+              We’re delighted to be planning a day with the people we love. This
+              will be the home for everything you’ll need to celebrate with us.
+            </p>
+          </div>
+          <p class="edition-mark" aria-hidden="true">01</p>
+        </section>
+
+        <section class="details card" id="details" aria-labelledby="details-title">
+          <div class="details-heading">
+            <p class="section-label">Wedding particulars</p>
+            <h2 id="details-title">The details</h2>
+          </div>
+
+          <dl class="details-grid">
+            <div>
+              <dt>When</dt>
+              <dd>To be announced</dd>
+            </div>
+            <div>
+              <dt>Where</dt>
+              <dd>To be announced</dd>
+            </div>
+            <div>
+              <dt>RSVP</dt>
+              <dd>Invitations to follow</dd>
+            </div>
+          </dl>
+        </section>
+      </main>
+
+      <footer>
+        <p>Made with love · Details coming soon</p>
+        <a href="#top">Back to top</a>
+      </footer>
+    </div>
+
+    <script>
+      const root = document.documentElement;
+      const themeKey = "wedding-theme";
+      const savedTheme = localStorage.getItem(themeKey);
+
+      if (savedTheme === "dark") root.dataset.theme = "dark";
+
+      document.getElementById("theme-toggle")?.addEventListener("click", () => {
+        const dark = root.dataset.theme !== "dark";
+        if (dark) root.dataset.theme = "dark";
+        else delete root.dataset.theme;
+        localStorage.setItem(themeKey, dark ? "dark" : "light");
+      });
+    </script>
   </body>
 </html>
