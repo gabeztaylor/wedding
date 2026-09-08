@@ -1,0 +1,8 @@
+{
+  "name": "wedding-website",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "check": "node --check scripts/check-site.mjs && node scripts/check-site.mjs"
+  }
+}
