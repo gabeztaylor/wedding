@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Wedding details, schedule, travel information, and updates."
+      content="Claire and Gabriel's wedding details, schedule, travel information, and updates."
     />
     <meta name="theme-color" content="#6f5a49" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Our Wedding" />
+    <meta property="og:title" content="Claire and Gabriel's Wedding" />
     <meta
       property="og:description"
-      content="Wedding details, schedule, travel information, and updates."
+      content="Claire and Gabriel's wedding details, schedule, travel information, and updates."
     />
     <meta property="og:url" content="https://gabrielsdescent.com/wedding/" />
-    <meta property="og:image" content="https://gabrielsdescent.com/wedding/hero-v3.png" />
+    <meta property="og:image" content="https://gabrielsdescent.com/wedding/hero-v4.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Our Wedding" />
+    <meta name="twitter:title" content="Claire and Gabriel's Wedding" />
     <meta
       name="twitter:description"
-      content="Wedding details, schedule, travel information, and updates."
+      content="Claire and Gabriel's wedding details, schedule, travel information, and updates."
     />
-    <meta name="twitter:image" content="https://gabrielsdescent.com/wedding/hero-v3.png" />
-    <title>Our Wedding</title>
+    <meta name="twitter:image" content="https://gabrielsdescent.com/wedding/hero-v4.png" />
+    <title>Claire and Gabriel's Wedding</title>
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,16 +37,16 @@
   <body>
     <div class="page-shell">
       <header class="site-header card">
-        <a class="brand" href="#top" aria-label="Our Wedding home">
+        <a class="brand" href="#top" aria-label="Claire and Gabriel's Wedding home">
           <span class="monogram" aria-hidden="true">W</span>
           <span class="brand-copy">
-            <span class="brand-name">Our Wedding</span>
-            <span class="brand-note">A celebration in the making</span>
+            <span class="brand-name">Claire and Gabriel's Wedding</span>
           </span>
         </a>
 
         <nav aria-label="Primary navigation">
           <a href="#details">Details</a>
+          <a href="#location">Location</a>
           <a href="#updates">Updates</a>
         </nav>
 
@@ -59,8 +59,8 @@
         <section class="hero card" aria-labelledby="page-title">
           <img
             class="hero-art"
-            src="hero-v3.png"
-            alt="Our Wedding — Save the Date, framed by an antique celestial archway"
+            src="hero-v4.png"
+            alt="Claire and Gabriel's Wedding — Save the Date, framed by an antique celestial archway"
             width="1730"
             height="909"
             decoding="async"
@@ -68,28 +68,15 @@
           />
           <div class="hero-inner">
             <p class="eyebrow">Details forthcoming</p>
-            <h1 class="visually-hidden" id="page-title">We’re getting married!</h1>
+            <h1 class="visually-hidden" id="page-title">Claire and Gabriel's Wedding</h1>
             <p class="intro">
-              Our wedding website is taking shape. Check back soon for the date,
-              location, schedule, travel details, and RSVP information.
+              Our wedding website is taking shape. Check back soon for schedule, travel details, and RSVP information.
             </p>
             <div class="hero-notes" aria-label="Wedding updates">
               <span>Invitation to follow</span>
               <span>Updates coming soon</span>
             </div>
           </div>
-        </section>
-
-        <section class="announcement card" id="updates" aria-labelledby="announcement-title">
-          <div class="announcement-copy">
-            <p class="section-label">A note from us</p>
-            <h2 id="announcement-title">The next chapter</h2>
-            <p>
-              We’re delighted to be planning a day with the people we love. This
-              will be the home for everything you’ll need to celebrate with us.
-            </p>
-          </div>
-          <p class="edition-mark" aria-hidden="true">01</p>
         </section>
 
         <section class="details card" id="details" aria-labelledby="details-title">
@@ -101,17 +88,57 @@
           <dl class="details-grid">
             <div>
               <dt>When</dt>
-              <dd>To be announced</dd>
+              <dd>
+                Saturday
+                <br />
+                <span class="detail-line">
+                  <i class="detail-icon calendar-icon" aria-hidden="true"></i>
+                  <em>March 27, 2027</em>
+                </span>
+              </dd>
             </div>
             <div>
               <dt>Where</dt>
-              <dd>To be announced</dd>
+              <dd>
+                Chapter II Events
+                <br />
+                <span class="detail-line">
+                  <i class="detail-icon location-icon" aria-hidden="true"></i>
+                  <em>Jacksonville, IL</em>
+                </span>
+              </dd>
             </div>
             <div>
               <dt>RSVP</dt>
               <dd>Invitations to follow</dd>
             </div>
           </dl>
+        </section>
+
+        <section class="location card" id="location" aria-labelledby="location-title">
+          <div class="location-heading">
+            <div>
+              <p class="section-label">Central Illinois</p>
+              <h2 id="location-title">Find your way</h2>
+            </div>
+            <p>
+              Jacksonville lies southwest of Peoria and Bloomington–Normal.
+            </p>
+          </div>
+
+          <figure class="location-map">
+            <img
+              src="central-illinois-map-medieval-v3.png"
+              alt="Medieval-style map of Central Illinois highlighting Galesburg, Peoria, Normal, and Bloomington, with a pin marking Jacksonville"
+              width="1671"
+              height="941"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              The celebration will take place in Jacksonville, Illinois.
+            </figcaption>
+          </figure>
         </section>
       </main>
 
@@ -134,6 +161,36 @@
         else delete root.dataset.theme;
         localStorage.setItem(themeKey, dark ? "dark" : "light");
       });
+
+      const precisePointer = window.matchMedia(
+        "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+      );
+
+      if (precisePointer.matches) {
+        document.querySelectorAll("main > .card").forEach((card) => {
+          let animationFrame;
+
+          card.addEventListener("pointermove", (event) => {
+            cancelAnimationFrame(animationFrame);
+            animationFrame = requestAnimationFrame(() => {
+              const bounds = card.getBoundingClientRect();
+              const horizontal = (event.clientX - bounds.left) / bounds.width - 0.5;
+              const vertical = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+              card.style.setProperty("--tilt-x", `${vertical * -3.2}deg`);
+              card.style.setProperty("--tilt-y", `${horizontal * 4.2}deg`);
+              card.classList.add("is-tilting");
+            });
+          });
+
+          card.addEventListener("pointerleave", () => {
+            cancelAnimationFrame(animationFrame);
+            card.style.setProperty("--tilt-x", "0deg");
+            card.style.setProperty("--tilt-y", "0deg");
+            card.classList.remove("is-tilting");
+          });
+        });
+      }
     </script>
   </body>
 </html>
