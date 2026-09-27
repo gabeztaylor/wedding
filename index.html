@@ -7,190 +7,145 @@
       name="description"
       content="Claire and Gabriel's wedding details, schedule, travel information, and updates."
     />
-    <meta name="theme-color" content="#6f5a49" />
+    <meta name="theme-color" content="#ffffff" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Claire and Gabriel's Wedding" />
     <meta
       property="og:description"
-      content="Claire and Gabriel's wedding details, schedule, travel information, and updates."
+      content="Claire and Gabriel are getting married March 27, 2027, in Jacksonville, Illinois."
     />
     <meta property="og:url" content="https://gabrielsdescent.com/wedding/" />
-    <meta property="og:image" content="https://gabrielsdescent.com/wedding/hero-v4.png" />
+    <meta property="og:image" content="https://gabrielsdescent.com/wedding/hero-columns.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Claire and Gabriel's Wedding" />
     <meta
       name="twitter:description"
-      content="Claire and Gabriel's wedding details, schedule, travel information, and updates."
+      content="Claire and Gabriel are getting married March 27, 2027, in Jacksonville, Illinois."
     />
-    <meta name="twitter:image" content="https://gabrielsdescent.com/wedding/hero-v4.png" />
+    <meta name="twitter:image" content="https://gabrielsdescent.com/wedding/hero-columns.png" />
     <title>Claire and Gabriel's Wedding</title>
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header card">
-        <a class="brand" href="#top" aria-label="Claire and Gabriel's Wedding home">
-          <span class="monogram" aria-hidden="true">W</span>
-          <span class="brand-copy">
-            <span class="brand-name">Claire and Gabriel's Wedding</span>
-          </span>
-        </a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Claire and Gabriel's Wedding home">
+        Claire <span aria-hidden="true">&amp;</span> Gabriel
+      </a>
 
-        <nav aria-label="Primary navigation">
-          <a href="#details">Details</a>
-          <a href="#location">Location</a>
-          <a href="#updates">Updates</a>
-        </nav>
+      <nav aria-label="Primary navigation">
+        <a href="#details">Details</a>
+        <a href="#location">Location</a>
+      </nav>
+    </header>
 
-        <button class="button" id="theme-toggle" type="button" aria-label="Toggle color theme">
-          Theme
-        </button>
-      </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">March twenty-seventh · 2027</p>
+          <h1 id="page-title">
+            <span>Claire</span>
+            <span class="ampersand">&amp;</span>
+            <span>Gabriel</span>
+          </h1>
+          <p class="hero-location">Jacksonville, Illinois</p>
+          <p class="intro">
+            We are delighted to invite you to celebrate with us. More details
+            will be shared as the day approaches.
+          </p>
+          <a class="text-link" href="#details">View wedding details</a>
+        </div>
 
-      <main id="top">
-        <section class="hero card" aria-labelledby="page-title">
+        <figure class="hero-figure">
           <img
-            class="hero-art"
-            src="hero-v4.png"
-            alt="Claire and Gabriel's Wedding — Save the Date, framed by an antique celestial archway"
-            width="1730"
-            height="909"
+            src="hero-columns.png"
+            alt="Minimal blue ink drawing of classical columns"
+            width="640"
+            height="533"
             decoding="async"
             fetchpriority="high"
           />
-          <div class="hero-inner">
-            <p class="eyebrow">Details forthcoming</p>
-            <h1 class="visually-hidden" id="page-title">Claire and Gabriel's Wedding</h1>
-            <p class="intro">
-              Our wedding website is taking shape. Check back soon for schedule, travel details, and RSVP information.
-            </p>
-            <div class="hero-notes" aria-label="Wedding updates">
-              <span>Invitation to follow</span>
-              <span>Updates coming soon</span>
-            </div>
-          </div>
-        </section>
+        </figure>
+      </section>
 
-        <section class="details card" id="details" aria-labelledby="details-title">
-          <div class="details-heading">
+      <section class="details section-shell" id="details" aria-labelledby="details-title">
+        <div class="section-heading">
+          <p class="section-number" aria-hidden="true">01</p>
+          <div>
             <p class="section-label">Wedding particulars</p>
             <h2 id="details-title">The details</h2>
           </div>
+        </div>
 
-          <dl class="details-grid">
-            <div>
-              <dt>When</dt>
-              <dd>
-                Saturday
-                <br />
-                <span class="detail-line">
-                  <i class="detail-icon calendar-icon" aria-hidden="true"></i>
-                  <em>March 27, 2027</em>
-                </span>
-              </dd>
-            </div>
-            <div>
-              <dt>Where</dt>
-              <dd>
-                Chapter II Events
-                <br />
-                <span class="detail-line">
-                  <i class="detail-icon location-icon" aria-hidden="true"></i>
-                  <em>Jacksonville, IL</em>
-                </span>
-              </dd>
-            </div>
-            <div>
-              <dt>RSVP</dt>
-              <dd>Invitations to follow</dd>
-            </div>
-          </dl>
-        </section>
-
-        <section class="location card" id="location" aria-labelledby="location-title">
-          <div class="location-heading">
-            <div>
-              <p class="section-label">Central Illinois</p>
-              <h2 id="location-title">Find your way</h2>
-            </div>
-            <p>
-              Jacksonville lies southwest of Peoria and Bloomington–Normal.
-            </p>
+        <dl class="details-grid">
+          <div>
+            <dt>When</dt>
+            <dd>
+              Saturday
+              <span class="detail-line">
+                <i class="detail-icon calendar-icon" aria-hidden="true"></i>
+                <em>March 27, 2027</em>
+              </span>
+            </dd>
           </div>
+          <div>
+            <dt>Where</dt>
+            <dd>
+              Chapter II Events
+              <span class="detail-line">
+                <i class="detail-icon location-icon" aria-hidden="true"></i>
+                <em>Jacksonville, Illinois</em>
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt>RSVP</dt>
+            <dd>
+              Invitation to follow
+              <span class="detail-line detail-line--plain">Formal details coming soon</span>
+            </dd>
+          </div>
+        </dl>
+      </section>
 
-          <figure class="location-map">
-            <img
-              src="central-illinois-map-medieval-v3.png"
-              alt="Medieval-style map of Central Illinois highlighting Galesburg, Peoria, Normal, and Bloomington, with a pin marking Jacksonville"
-              width="1671"
-              height="941"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption>
-              The celebration will take place in Jacksonville, Illinois.
-            </figcaption>
-          </figure>
-        </section>
-      </main>
+      <section class="location section-shell" id="location" aria-labelledby="location-title">
+        <div class="section-heading location-heading">
+          <p class="section-number" aria-hidden="true">02</p>
+          <div>
+            <p class="section-label">Central Illinois</p>
+            <h2 id="location-title">Find your way</h2>
+          </div>
+          <p class="section-intro">
+            Jacksonville lies southwest of Peoria and Bloomington–Normal.
+          </p>
+        </div>
 
-      <footer>
-        <p>Made with love · Details coming soon</p>
-        <a href="#top">Back to top</a>
-      </footer>
-    </div>
+        <figure class="location-map">
+          <img
+            src="central-illinois-map-modern.png"
+            alt="Blue line map of Central Illinois highlighting Galesburg, Peoria, Normal, and Bloomington, with a pin marking Jacksonville"
+            width="1671"
+            height="941"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            The celebration will take place in Jacksonville, Illinois.
+          </figcaption>
+        </figure>
+      </section>
+    </main>
 
-    <script>
-      const root = document.documentElement;
-      const themeKey = "wedding-theme";
-      const savedTheme = localStorage.getItem(themeKey);
-
-      if (savedTheme === "dark") root.dataset.theme = "dark";
-
-      document.getElementById("theme-toggle")?.addEventListener("click", () => {
-        const dark = root.dataset.theme !== "dark";
-        if (dark) root.dataset.theme = "dark";
-        else delete root.dataset.theme;
-        localStorage.setItem(themeKey, dark ? "dark" : "light");
-      });
-
-      const precisePointer = window.matchMedia(
-        "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
-      );
-
-      if (precisePointer.matches) {
-        document.querySelectorAll("main > .card").forEach((card) => {
-          let animationFrame;
-
-          card.addEventListener("pointermove", (event) => {
-            cancelAnimationFrame(animationFrame);
-            animationFrame = requestAnimationFrame(() => {
-              const bounds = card.getBoundingClientRect();
-              const horizontal = (event.clientX - bounds.left) / bounds.width - 0.5;
-              const vertical = (event.clientY - bounds.top) / bounds.height - 0.5;
-
-              card.style.setProperty("--tilt-x", `${vertical * -3.2}deg`);
-              card.style.setProperty("--tilt-y", `${horizontal * 4.2}deg`);
-              card.classList.add("is-tilting");
-            });
-          });
-
-          card.addEventListener("pointerleave", () => {
-            cancelAnimationFrame(animationFrame);
-            card.style.setProperty("--tilt-x", "0deg");
-            card.style.setProperty("--tilt-y", "0deg");
-            card.classList.remove("is-tilting");
-          });
-        });
-      }
-    </script>
+    <footer>
+      <p>Claire &amp; Gabriel · March 27, 2027</p>
+      <a href="#top">Back to top</a>
+    </footer>
   </body>
 </html>
