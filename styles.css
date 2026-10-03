@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
   --bg: #192b46;
@@ -7,6 +15,7 @@
   --blue: #9bbfd5;
   --sans: "Avenir Next", Avenir, "Century Gothic", Futura, sans-serif;
   --serif: Baskerville, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --display: "Cinzel", var(--serif);
 }
 
 * { box-sizing: border-box; }
@@ -158,11 +167,27 @@ footer a { padding-block: 10px; }
 }
 .gallery-photo:hover img, .gallery-photo:focus-visible img { transform: scale(1.035); }
 
+h1, h2, h3, h4, h5, h6,
+.brand-name, .brand-note,
+.eyebrow, .section-label,
+.intro, .form-note, dt, dd,
+.details-rsvp > p:first-child,
+.gallery-heading > p:last-child {
+  font-family: var(--display);
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: 400; letter-spacing: .025em; }
+.eyebrow, .section-label, dt { font-size: 12px; letter-spacing: .16em; }
+.brand-copy { min-width: 0; }
+.brand-note { font-size: 11px; line-height: 1.6; }
+.form-note { font-size: 13px; }
+
 @media (max-width: 760px) {
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .engagement-gallery { padding-top: 32px; }
   .page-shell { width: calc(100% - 32px); padding-top: 12px; }
-  .site-header { grid-template-columns: 1fr auto; gap: 12px; padding: 12px; margin-bottom: 18px; }
+  .site-header { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 12px; margin-bottom: 18px; }
+  .brand { min-width: 0; }
   nav { grid-column: 1 / -1; grid-row: 2; }
   .hero-inner { padding: 36px 20px; }
   .hero-art {
@@ -179,7 +204,7 @@ footer a { padding-block: 10px; }
 }
 @media (max-width: 460px) {
   .brand-note { display: none; }
-  .brand-name { font-size: 19px; }
+  .brand-name { font-size: 16px; }
   .monogram { width: 27px; height: 27px; }
   .button { padding: 10px 16px; gap: 8px; }
   footer { align-items: flex-start; flex-direction: column; gap: 4px; padding-inline: 12px; }
