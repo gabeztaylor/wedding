@@ -164,13 +164,14 @@ footer a { padding-block: 10px; }
   .page-shell { width: calc(100% - 32px); padding-top: 12px; }
   .site-header { grid-template-columns: 1fr auto; gap: 12px; padding: 12px; margin-bottom: 18px; }
   nav { grid-column: 1 / -1; grid-row: 2; }
-  .hero-figure { margin-inline: -16px; }
   .hero-inner { padding: 36px 20px; }
   .hero-art {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0;
+    width: calc(100vw - 12px);
+    max-width: none;
+    height: auto;
+    margin-inline-start: calc(50% - 50vw + 6px);
+    aspect-ratio: 1730 / 909;
+    border-radius: 9px;
   }
   .details { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
   .couple-portrait { max-width: 420px; margin-inline: auto; }

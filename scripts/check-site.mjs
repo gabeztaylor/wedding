@@ -9,7 +9,6 @@ const stylesheet = await readFile(
 const requiredHtml = [
   "<!doctype html>",
   '<meta name="viewport"',
-  '<link rel="stylesheet" href="styles.css"',
   "<main",
   "<h1",
 ];
@@ -18,6 +17,10 @@ for (const fragment of requiredHtml) {
   if (!html.toLowerCase().includes(fragment)) {
     throw new Error(`Missing required HTML fragment: ${fragment}`);
   }
+}
+
+if (!/<link\b[^>]*rel="stylesheet"[^>]*href="styles\.css(?:\?[^"\s]*)?"/i.test(html)) {
+  throw new Error("Missing styles.css stylesheet link");
 }
 
 if (stylesheet.trim().length === 0) {
