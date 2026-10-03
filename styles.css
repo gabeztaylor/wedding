@@ -166,7 +166,12 @@ footer a { padding-block: 10px; }
   nav { grid-column: 1 / -1; grid-row: 2; }
   .hero-figure { margin-inline: -16px; }
   .hero-inner { padding: 36px 20px; }
-  .hero-art { border-radius: 0; }
+  .hero-art {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
   .details { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
   .couple-portrait { max-width: 420px; margin-inline: auto; }
   .details-copy { text-align: center; }
