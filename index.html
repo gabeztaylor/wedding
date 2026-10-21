@@ -27,7 +27,7 @@
       content="Celebrate our wedding on Saturday, March 27, 2027 in Jacksonville, Illinois. Find the details and RSVP."
     />
     <link rel="preload" href="fonts/Cinzel-variable.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=cinzel-1" />
+    <link rel="stylesheet" href="styles.css?v=guest-details-1" />
   </head>
   <body>
     <div class="page-shell">
@@ -42,6 +42,8 @@
 
         <nav aria-label="Primary navigation">
           <a href="#details">Details</a>
+          <a href="#stay">Hotel</a>
+          <a href="#registry">Registry</a>
           <a href="#photos">Photos</a>
         </nav>
 
@@ -96,7 +98,10 @@
             </div>
             <div>
               <dt>Where</dt>
-              <dd><span class="icon-label"><svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg><span>Jacksonville, Illinois</span></span></dd>
+              <dd><span class="icon-label"><svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg><span><a href="https://www.chapteriievents.com/">Chapter II</a></span></span>
+                <span class="venue-address">420 S Clay Ave<br />Jacksonville, IL 62650</span>
+                <a class="detail-link" href="https://www.chapteriievents.com/parking">Parking information</a>
+              </dd>
             </div>
           </dl>
           <div class="details-rsvp">
@@ -106,6 +111,21 @@
           </div>
           </div>
         </section>
+        <div class="guest-info">
+          <section class="guest-card" id="stay" aria-labelledby="stay-title">
+            <p class="section-label">Stay nearby</p>
+            <h2 id="stay-title">Hotel room block</h2>
+            <p>We are reserving a hotel room block at the Hampton Inn in Jacksonville, Illinois.</p>
+            <p class="guest-note">Booking details will be shared once the block is ready.</p>
+            <a class="button" href="https://maps.app.goo.gl/GUkLKEzbrCh8k8E97">View Hampton Inn on the map</a>
+          </section>
+          <section class="guest-card" id="registry" aria-labelledby="registry-title">
+            <p class="section-label">With love &amp; thanks</p>
+            <h2 id="registry-title">Our registry</h2>
+            <p>We’re so grateful to celebrate with you. If you’d like to give a gift, you can find our wedding registry on Amazon.</p>
+            <a class="button" href="https://www.amazon.com/wedding/share/Gabeandclaire">View our Amazon registry</a>
+          </section>
+        </div>
         <section class="engagement-gallery" id="photos" aria-labelledby="photos-title">
           <div class="gallery-heading">
             <h2 id="photos-title">Our engagement</h2>

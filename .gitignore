@@ -1,2 +1,4 @@
 .DS_Store
-texts.ipynb
+*.ipynb
+*.csv
+*.txt
